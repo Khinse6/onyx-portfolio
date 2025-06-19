@@ -27,6 +27,9 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	nitro: {
+		preset: 'static',
+	},
 	ui: {
 		colorMode: false,
 	},
