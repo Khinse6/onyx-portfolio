@@ -7,49 +7,24 @@ on:
       - 'master'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [20]
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Identify package manager
-        id: pkgman
-        run: |
-          cache=`[ -f "./pnpm-lock.yaml" ] && echo "pnpm" || ([ -f "./package-lock.json" ] && echo "npm" || ([ -f "./yarn.lock" ] && echo "yarn" || echo ""))`
-          package_manager=`[ ! -z "$cache" ] && echo "$cache" || echo "npm"`
-          echo "cache=$cache" >> $GITHUB_OUTPUT
-          echo "package_manager=$package_manager" >> $GITHUB_OUTPUT
-
-      - uses: pnpm/action-setup@v4
-        if: ${{ steps.pkgman.outputs.package_manager == 'pnpm' }}
-        name: Install pnpm
-
-      - uses: actions/setup-node@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: ${{ matrix.node }}
-          cache: ${{ steps.pkgman.outputs.cache }}
+          version: 10.9.0
 
       - name: Install dependencies
-        run: ${{ steps.pkgman.outputs.package_manager }} install
+        run: pnpm install
 
       - name: Generate static site
-        run: ${{ steps.pkgman.outputs.package_manager }} run generate
-        env:
-          NITRO_PRESET: github_pages
-          NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
+        run: pnpm run generate
 
       - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
