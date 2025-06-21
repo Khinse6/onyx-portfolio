@@ -4,7 +4,7 @@
 	>
 		<div
 			v-if="$slots.image"
-			class="row-span-3 flex h-fit"
+			class="flex h-fit md:row-span-3"
 		>
 			<slot
 				name="image"
@@ -23,7 +23,7 @@
 			</h2>
 			<slot name="description" />
 		</div>
-		<div>
+		<div class="col-span-2 md:col-span-1">
 			<h2 class="text-3xl">Educação</h2>
 			<div class="flex justify-between">
 				<div>
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-between">
+		<div class="col-span-2 flex justify-between md:col-span-1">
 			<div>
 				<h2 class="text-3xl">Idiomas</h2>
 				<slot name="languages" />
@@ -46,5 +46,3 @@
 		</div>
 	</div>
 </template>
-
-<style scoped></style>

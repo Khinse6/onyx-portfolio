@@ -10,6 +10,7 @@ export default defineNuxtConfig({
 		'@nuxt/scripts',
 		'@nuxt/content',
 		'@nuxt/ui',
+		'@tresjs/nuxt',
 	],
 	devtools: { enabled: true },
 	css: ['~/assets/css/main.css'],
