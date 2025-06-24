@@ -16,11 +16,11 @@
 				:class="[index % 2 === 0 ? 'md:col-start-2' : 'md:col-start-1']"
 				:style="{ '--row-start': index + 1 }"
 			>
-				<h4 class="mb-2">{{ item.title }} - {{ item.date }}</h4>
-				<p>{{ item.description }}</p>
+				<h4 class="mb-2 text-4xl">{{ item.title }} - {{ item.date }}</h4>
+				<p class="text-2xl">{{ item.description }}</p>
 				<ULink
 					:to="item.path"
-					class="inline-block underline"
+					class="inline-block text-2xl underline"
 				>
 					Saber mais
 				</ULink>
@@ -30,8 +30,8 @@
 </template>
 
 <script lang="ts" setup>
-	const { data: items } = await useAsyncData('branding-grid', () => {
-		return queryCollection('branding')
+	const { data: items } = await useAsyncData('papwer-grid', () => {
+		return queryCollection('papers')
 			.select('title', 'description', 'img', 'date', 'path')
 			.order('date', 'DESC')
 			.limit(2)

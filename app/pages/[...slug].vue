@@ -2,7 +2,7 @@
 	<ContentRenderer
 		v-if="page"
 		:value="page"
-		class="flex flex-col"
+		class="flex flex-col gap-4"
 		:prose="false"
 	/>
 </template>

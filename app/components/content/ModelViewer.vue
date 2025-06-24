@@ -1,43 +1,23 @@
 <template>
-	<TresCanvas clear-color="#000">
-		<TresPerspectiveCamera :position="[0, 0, 5]" />
-		<OrbitControls />
+	<div class="h-screen">
+		<TresCanvas
+			clear-color="#82DBC5"
+			shadows
+			alpha
+		>
+			<TresPerspectiveCamera :position="[0, 1, 1]" />
 
-		<!-- Lighting -->
-		<TresAmbientLight :intensity="0.5" />
-		<TresDirectionalLight
-			:position="[2, 2, 2]"
-			:intensity="1"
-		/>
-
-		<!-- 3D Model -->
-		<Suspense>
-			<primitive
-				:object="model"
-				:rotation="rotation"
+			<Suspense>
+				<GLTFModel
+					path="/models/brand-model.glb"
+					draco
+				/>
+			</Suspense>
+			<TresDirectionalLight
+				:position="[0, 0, 0]"
+				:intensity="1.5"
+				cast-shadow
 			/>
-		</Suspense>
-	</TresCanvas>
+		</TresCanvas>
+	</div>
 </template>
-
-<script setup lang="ts">
-	import { Vector2 } from 'three'
-
-	const { scene: model } = await useGLTF('/models/brand-model.gltf')
-
-	const rotation = reactive([0, 0, 0])
-
-	const mouse = new Vector2()
-
-	const handleMouseMove = (event: MouseEvent) => {
-		mouse.x = (event.clientX / window.innerWidth) * 2 - 1
-		mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
-
-		rotation[1] = mouse.x * 1.5 // Rotate Y
-		rotation[0] = mouse.y * 1.5 // Rotate X
-	}
-
-	onMounted(() => {
-		window.addEventListener('mousemove', handleMouseMove)
-	})
-</script>

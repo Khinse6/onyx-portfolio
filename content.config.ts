@@ -14,5 +14,21 @@ export default defineContentConfig({
 				img: z.string(),
 			}),
 		}),
+		design: defineCollection({
+			type: 'page',
+			source: '2.projects/3.design/**',
+			schema: z.object({
+				date: z.string(),
+				img: z.string(),
+			}),
+		}),
+		papers: defineCollection({
+			type: 'page',
+			source: '2.projects/4.paper-works/**',
+			schema: z.object({
+				date: z.string(),
+				img: z.string(),
+			}),
+		}),
 	},
 })

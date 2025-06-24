@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="grid max-w-6xl auto-cols-auto gap-x-4 gap-y-4 self-center text-2xl"
+		class="grid auto-cols-auto gap-x-4 gap-y-4 self-center pb-8 text-2xl md:w-4/5"
 	>
 		<div
 			v-if="$slots.image"

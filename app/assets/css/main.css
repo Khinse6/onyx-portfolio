@@ -44,7 +44,21 @@
 	h6 {
 		font-family: var(--font-bebas), sans-serif;
 	}
+	h1 {
+		font-size: 3rem;
+	}
+	h2 {
+		font-size: 2.7rem;
+		line-height: 40%;
+	}
+	h3 {
+		font-size: 2.5rem;
+	}
+	h4 {
+		font-size: 2.25rem;
+	}
 	p {
 		font-family: var(--font-inter), sans-serif;
+		font-size: 1.5rem;
 	}
 }
