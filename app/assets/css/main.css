@@ -2,22 +2,25 @@
 @import '@nuxt/ui';
 
 @theme {
-	--font-bebas: 'Bebas Neue';
-	--font-inter: 'Inter';
+	--font-bebas: 'Bebas Neue', sans-serif;
+	--font-inter: 'Inter', sans-serif;
 	--ui-container: 90%;
 
-	/* Cores */
-
+	/* Text Colors */
+	--ui-text: var(--ui-color-neutral-100);
 	--ui-text-dimmed: var(--ui-color-neutral-500);
 	--ui-text-muted: var(--ui-color-neutral-200);
 	--ui-text-toned: var(--ui-color-neutral-300);
-	--ui-text: var(--ui-color-neutral-100);
 	--ui-text-highlighted: var(--color-white);
+
+	/* Backgrounds */
 	--ui-bg: var(--ui-color-neutral-950);
 	--ui-bg-muted: var(--ui-color-neutral-800);
 	--ui-bg-elevated: var(--ui-color-neutral-800);
 	--ui-bg-accented: var(--ui-color-neutral-700);
 	--ui-bg-inverted: var(--color-white);
+
+	/* Borders */
 	--ui-border: var(--ui-color-neutral-800);
 	--ui-border-muted: var(--ui-color-neutral-700);
 	--ui-border-accented: var(--ui-color-neutral-700);
@@ -42,23 +45,23 @@
 	h4,
 	h5,
 	h6 {
-		font-family: var(--font-bebas), sans-serif;
+		font-family: var(--font-bebas);
 	}
 	h1 {
-		font-size: 3rem;
+		font-size: clamp(2.5rem, 5vw, 3rem);
 	}
 	h2 {
-		font-size: 2.7rem;
-		line-height: 40%;
+		font-size: clamp(2.25rem, 4.5vw, 2.7rem);
+		line-height: 1;
 	}
 	h3 {
-		font-size: 2.5rem;
+		font-size: clamp(2rem, 4vw, 2.5rem);
 	}
 	h4 {
-		font-size: 2.25rem;
+		font-size: clamp(1.75rem, 3.5vw, 2.25rem);
 	}
 	p {
-		font-family: var(--font-inter), sans-serif;
-		font-size: 1.5rem;
+		font-family: var(--font-inter);
+		font-size: clamp(1rem, 1.5vw, 1.5rem);
 	}
 }

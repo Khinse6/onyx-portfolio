@@ -16,11 +16,11 @@
 				:class="[index % 2 === 0 ? 'md:col-start-2' : 'md:col-start-1']"
 				:style="{ '--row-start': index + 1 }"
 			>
-				<h4 class="mb-2 text-4xl">{{ item.title }} - {{ item.date }}</h4>
-				<p class="text-2xl">{{ item.description }}</p>
+				<h4 class="mb-2">{{ item.title }} - {{ item.date }}</h4>
+				<p>{{ item.description }}</p>
 				<ULink
 					:to="item.path"
-					class="inline-block text-2xl underline"
+					class="inline-block underline"
 				>
 					Saber mais
 				</ULink>

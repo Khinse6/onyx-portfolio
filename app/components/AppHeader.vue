@@ -22,7 +22,8 @@
 					align: 'end',
 					side: 'bottom',
 				}"
-				:ui="{ itemLabel: 'font-bebas' }"
+				:ui="{ itemLabel: 'font-bebas text-2xl' }"
+				size="xl"
 			>
 				<UButton
 					icon="ic:round-menu"
