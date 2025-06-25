@@ -1,4 +1,9 @@
+# Projetos
+
 ## branding
+
+::branding-carousel
+::
 
 ## ilustração
 
