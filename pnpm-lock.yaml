@@ -59,6 +59,9 @@ importers:
       vue:
         specifier: ^3.5.17
         version: 3.5.17(typescript@5.8.3)
+      vue-masonry-css:
+        specifier: ^1.0.3
+        version: 1.0.3
       vue-router:
         specifier: ^4.5.1
         version: 4.5.1(vue@3.5.17(typescript@5.8.3))
@@ -5554,6 +5557,9 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
+
+  vue-masonry-css@1.0.3:
+    resolution: {integrity: sha512-viecHQiHVLez7HlYUQsv1wJb2MT/RDSzkDp6m3In41vPrk6OsBmT2qRE8LZqYIA4daIwrnx/Xm8h4fjOpuE3hw==}
 
   vue-router@4.5.1:
     resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
@@ -12363,6 +12369,8 @@ snapshots:
       semver: 7.7.2
     transitivePeerDependencies:
       - supports-color
+
+  vue-masonry-css@1.0.3: {}
 
   vue-router@4.5.1(vue@3.5.17(typescript@5.8.3)):
     dependencies:
