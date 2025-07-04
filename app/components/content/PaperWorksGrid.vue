@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-	const { data: items } = await useAsyncData('papwer-grid', () => {
+	const { data: items } = await useAsyncData('paper-grid', () => {
 		return queryCollection('papers')
 			.select('title', 'description', 'img', 'date', 'path')
 			.order('date', 'DESC')

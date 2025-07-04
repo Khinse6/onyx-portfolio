@@ -9,6 +9,11 @@ img: design/flyer-informativo.jpg
 
 # FLYER INFORMATIVO
 
+::floating-image
+#image
+![Flyer](/design/flyer-informativo.jpg)
+
+#description
 Proposta gráfica de um flyer informativo desenvolvido para o Museu Nacional da Música, com foco na sinalétiva e identificação espacial.
 
 A proposta incluiu:
@@ -22,7 +27,7 @@ Organização e hierarquização das informações sobre exposições, salas tem
 Integração com a identidade visual do museu, utilizando uma paleta cromática sóbria e elementos gráficos coerentes com a marca.
 
 O design foi pensado para oferecer clareza, acessibilidade e funcionalidade, sem abrir mão de um apelo estético moderno e alinhado ao universo musical.
-
+::
 
 
 

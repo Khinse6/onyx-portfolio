@@ -23,9 +23,9 @@ Serviços: branding, direção de arte, ilustração, webdesign, publicidade e d
 ---
 images:
   - /branding/vene/vene.jpg
-  - /branding/vene/vene-caps.png
-  - /branding/vene/vene-hoodie-back.png
   - /branding/vene/vene-hoodie.png
+  - /branding/vene/vene-hoodie-back.png
+  - /branding/vene/vene-caps.png
   - /branding/vene/vene-keychain.png
 ---
 ::

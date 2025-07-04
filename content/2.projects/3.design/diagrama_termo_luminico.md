@@ -7,7 +7,11 @@ date: 2024-03
 ## DESIGN COMUNICAÇÃO
 
 # Diagrama Termo-Lumínico | Porto 2023
+::floating-image
+#image
+![Termo](/design/diagrama-termo-luminico.jpg)
 
+#description
 Poster informativo de dados meteorológicos, astronômicos e civis ao longo do ano de 2023 na cidade do Porto.
 Este projeto explora o cruzamento entre design de informação, visualização de dados e estética gráfica. A composição radial apresenta de forma contínua e integrada:
 
@@ -22,3 +26,4 @@ Os feriados nacionais e municipais, identificados ao longo do perímetro.
 O design aposta numa linguagem visual precisa, limpa e futurista, com fundo escuro e traços geométricos de alta densidade gráfica, remetendo a cartografias científicas ou instrumentos astronômicos.
 
 Este pôster foi desenvolvido como uma peça única de design de dados com fins educativos e expositivos, funcionando simultaneamente como objeto decorativo e ferramenta de leitura temporal.
+::

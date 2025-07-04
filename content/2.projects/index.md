@@ -13,6 +13,6 @@ Ilustração Digital
 
 ## design de comunicação
 
-## tatuagem
-
 ## paper works
+::paper-works-carousel
+::

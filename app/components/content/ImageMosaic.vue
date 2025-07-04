@@ -1,11 +1,11 @@
 <template>
-	<div class="flex w-fit flex-wrap gap-2">
+	<div class="justify flex w-full flex-wrap justify-center gap-2">
 		<NuxtImg
 			v-for="(img, i) in images"
 			:key="i"
 			:src="img"
 			alt=""
-			class="h-96 rounded-2xl object-cover shadow lg:max-w-1/2"
+			class="h-48 rounded-2xl object-cover shadow md:h-[40rem] lg:max-w-1/2"
 		/>
 	</div>
 </template>
